@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Spotify</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+ 
+    
+</head>
+<body class="auth-page">
+    <div class="auth-container">
+        <div class="auth-box">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_CMYK_Green.png" alt="Logo" />
+                </a>
+            </div>
+            <h1>Log in to Spotify</h1>
+            <form class="auth-form" id="login-form">
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="auth-button">Log In</button>
+            </form>
+            <div class="auth-divider">
+                <span>or</span>
+            </div>
+            <div class="social-login">
+                <button class="google-btn" id="google-login-btn">
+                    <i class="fab fa-google"></i>
+                    Continue with Google
+                </button>
+            </div>
+            <div class="auth-footer">
+                <p>Don't have an account? <a href="signup.html">Sign up for Spotify</a></p>
+            </div>
+        </div>
+    </div>
+    <script src="js/login.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/common.js"></script>
+</body>
+</html>

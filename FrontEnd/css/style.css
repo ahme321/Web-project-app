@@ -1,0 +1,252 @@
+:root {
+    --primary-green: #1DB954;
+    --primary-black: #121212;
+    --secondary-black: #181818;
+    --light-black: #282828;
+    --primary-grey: #b3b3b3;
+    --hover-white: rgba(255, 255, 255, 0.1);
+    --standard-padding: 8px;
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 20px;
+}
+
+/* Common Mixins */
+.hover-effect {
+    transition: background-color 0.2s;
+    cursor: pointer;
+}
+
+.hover-effect:hover {
+    background-color: var(--hover-white);
+}
+
+/* Common Image Styles */
+.small-image {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--border-radius-sm);
+}
+
+.medium-image {
+    width: 64px;
+    height: 64px;
+    border-radius: var(--border-radius-sm);
+}
+
+.large-image {
+    width: 232px;
+    height: 232px;
+    box-shadow: 0 4px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* Text Styles */
+.primary-text {
+    color: white;
+    margin: 0;
+}
+
+.secondary-text {
+    color: var(--primary-grey);
+    margin: 0;
+}
+
+.title-large {
+    font-size: 96px;
+    font-weight: bold;
+}
+
+.title-medium {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.text-small {
+    font-size: 14px;
+}
+
+/* Layout Components */
+.flex-center {
+    display: flex;
+    align-items: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+/* Search Bar Styles */
+.search-container {
+    position: relative;
+    margin: 0 32px;
+}
+
+
+
+.tracks-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tracks-list th {
+    text-align: left;
+    color: var(--primary-grey);
+    font-size: 14px;
+    font-weight: 400;
+    padding: var(--standard-padding);
+    border-bottom: 1px solid var(--hover-white);
+}
+
+.tracks-list tr {
+    composes: hover-effect;
+    height: 56px;
+}
+
+.tracks-list td {
+    composes: primary-text;
+    padding: var(--standard-padding);
+}
+
+.song-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: relative;
+}
+
+.song-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    position: relative;
+}
+
+.song-info .play-overlay {
+    position: absolute;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.song-info .play-overlay i {
+    color: white;
+    font-size: 16px;
+}
+
+.tracks-list tr:hover .play-overlay {
+    opacity: 1;
+}
+
+.tracks-list tr.active-track .song-title {
+    color: #1DB954;
+}
+
+.tracks-list tr.active-track .play-overlay {
+    opacity: 1;
+    background-color: rgba(29, 185, 84, 0.2);
+}
+
+.tracks-list tr.active-track .play-overlay i {
+    color: #1DB954;
+}
+
+/* Liked Songs Header */
+.liked-songs-header {
+    padding: 32px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+    display: flex;
+    align-items: flex-end;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.playlist-info {
+    composes: flex-column;
+    gap: 8px;
+}
+
+.playlist-info h1 {
+    composes: title-large primary-text;
+}
+
+.playlist-info p {
+    composes: text-small secondary-text;
+}
+
+/* Player Controls */
+.player {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--secondary-black);
+    padding: 16px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+}
+
+.player-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.control-buttons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.progress-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.progress-bar {
+    flex-grow: 1;
+    height: 4px;
+    background-color: var(--hover-white);
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.progress {
+    height: 100%;
+    background-color: var(--primary-green);
+    border-radius: 2px;
+    width: 0;
+}
+
+/* Volume Controls */
+.volume-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: flex-end;
+    padding-right: 16px;
+}
+
+.volume-slider {
+    width: 100px;
+    height: 4px;
+    background-color: var(--hover-white);
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.volume-progress {
+    height: 100%;
+    background-color: var(--primary-green);
+    border-radius: 2px;
+}

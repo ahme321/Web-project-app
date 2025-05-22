@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Config -->
+    <script src="js/config.js"></script>
+    <script src="js/common.js"></script>
+</head>
+
+<body>
+    <!-- sidebar -->
+    <div class="sidebar">
+        <!-- logo -->
+        <div class="logo">
+            <a href="index.html">
+                <img src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_CMYK_Green.png" alt="Logo" />
+            </a>
+        </div>
+
+        <!-- navigation menu -->
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="search.html">
+                        <i class="fas fa-search"></i>
+                        <span>Search</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="playlists.html">
+                        <i class="fas fa-book"></i>
+                        <span>Your Library</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="live-stream.html">
+                        <i class="fas fa-broadcast-tower"></i>
+                        <span>Live Stream</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="playlists.html">
+                        <i class="fas fa-plus-square"></i>
+                        <span>Create Playlist</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="liked-songs.html">
+                        <i class="fas fa-heart"></i>
+                        <span>Liked Songs</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- main content -->
+    <div class="main-container">
+        <div class="topbar">
+            <div class="prev-next-buttons">
+                <button type="button" id="prev-button"><i class="fas fa-chevron-left"></i></button>
+                <button type="button" id="next-button"><i class="fas fa-chevron-right"></i></button>
+            </div>
+
+            <div class="navbar">
+                <ul>
+                    <li>
+                        <a href="#">Premium</a>
+                    </li>
+                    <li>
+                        <a href="#">Download</a>
+                    </li>
+                    <li class="divider">|</li>
+                </ul>
+                <div class="navbar-right">
+                    <!-- This will be updated by common.js -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Access Section -->
+        <div class="quick-access">
+            <h2>Quick Access</h2>
+            <div class="quick-access-grid">
+                <div class="quick-access-card">
+                    <a href="liked-songs.html">
+                        <div class="quick-access-content">
+                            <img src="https://picsum.photos/seed/liked-songs/240/120" alt="Liked Songs">
+                            <div class="quick-access-info">
+                                <i class="fas fa-heart"></i>
+                                <h3>Liked Songs</h3>
+                                <p>Your favorite tracks</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="quick-access-card">
+                    <a href="playlists.html">
+                        <div class="quick-access-content">
+                            <img src="https://picsum.photos/seed/my-playlists/240/120" alt="My Playlists">
+                            <div class="quick-access-info">
+                                <i class="fas fa-music"></i>
+                                <h3>My Playlists</h3>
+                                <p>Your created playlists</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="quick-access-card">
+                    <a href="#">
+                        <div class="quick-access-content">
+                            <img src="https://picsum.photos/seed/daily-mix-1/240/120" alt="Daily Mix 1">
+                            <div class="quick-access-info">
+                                <i class="fas fa-compact-disc"></i>
+                                <h3>Daily Mix 1</h3>
+                                <p>Your daily mix of favorite songs</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="quick-access-card">
+                    <a href="#">
+                        <div class="quick-access-content">
+                            <img src="https://picsum.photos/seed/daily-mix-2/240/120" alt="Daily Mix 2">
+                            <div class="quick-access-info">
+                                <i class="fas fa-compact-disc"></i>
+                                <h3>Daily Mix 2</h3>
+                                <p>Your daily mix of favorite songs</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="spotify-playlists">
+            <h2>Spotify Playlists</h2>
+            <div class="playlist-grid">
+                <div class="playlist-card">
+                    <img src="https://picsum.photos/seed/top-hits/180/180" alt="Today's Top Hits">
+                    <h3>Today's Top Hits</h3>
+                    <p>Taylor Swift is on top of the Hottest 50!</p>
+                </div>
+                <div class="playlist-card">
+                    <img src="https://picsum.photos/seed/rap-caviar/180/180" alt="RapCaviar">
+                    <h3>RapCaviar</h3>
+                    <p>New music from Drake, Kendrick Lamar and more.</p>
+                </div>
+                <div class="playlist-card">
+                    <img src="https://picsum.photos/seed/2010s/180/180" alt="All Out 2010s">
+                    <h3>All Out 2010s</h3>
+                    <p>The biggest songs of the 2010s.</p>
+                </div>
+                <div class="playlist-card">
+                    <img src="https://picsum.photos/seed/rock/180/180" alt="Rock Classics">
+                    <h3>Rock Classics</h3>
+                    <p>Rock legends & epic songs that continue to inspire generations.</p>
+                </div>
+                <div class="playlist-card">
+                    <img src="https://picsum.photos/seed/chill/180/180" alt="Chill Hits">
+                    <h3>Chill Hits</h3>
+                    <p>Kick back to the best new and recent chill hits.</p>
+                </div>
+                <div class="playlist-card">
+                    <img src="https://picsum.photos/seed/mood/180/180" alt="Mood Booster">
+                    <h3>Mood Booster</h3>
+                    <p>Get happy with today's dose of feel-good songs!</p>
+                </div>
+            </div>
+
+            <h2>Made For You</h2>
+            <div class="playlist-grid">
+                <div class="playlist-card">
+                <img src="https://picsum.photos/seed/jazz/180/180" alt="Daily Mix 1">
+                    <h3>Daily Mix 1</h3>
+                    <p>Made for you based on your listening history</p>
+                </div>
+                <div class="playlist-card">
+                <img src="https://picsum.photos/seed/2000s/180/180" alt="Daily Mix 2">
+                    <h3>Daily Mix 2</h3>
+                    <p>Made for you based on your listening history</p>
+                </div>
+                <div class="playlist-card">
+                <img src="https://picsum.photos/seed/90s/180/180" alt="Daily Mix 3">
+                    <h3>Daily Mix 3</h3>
+                    <p>Made for you based on your listening history</p>
+                </div>
+                <div class="playlist-card">
+                <img src="https://picsum.photos/seed/indie/180/180" alt="Daily Mix 4">
+                    <h3>Daily Mix 4</h3>
+                    <p>Made for you based on your listening history</p>
+                </div>
+                <div class="playlist-card">
+                <img src="https://picsum.photos/seed/oldies/180/180" alt="Daily Mix 5">
+                    <h3>Daily Mix 5</h3>
+                    <p>Made for you based on your listening history</p>
+                </div>
+                <div class="playlist-card">
+                <img src="https://picsum.photos/seed/acoustic/180/180" alt="Daily Mix 6">
+                    <h3>Daily Mix 6</h3>
+                    <p>Made for you based on your listening history</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="player">
+        <div class="now-playing">
+            <div class="song-info">
+                <img src="images/image.jpg" alt="Current Song" class="current-song-image">
+                <div class="song-details">
+                    <h4>K.</h4>
+                    <p>Cigarettes After Sex</p>
+                </div>
+                <button class="like-button"><i class="fas fa-heart"></i></button>
+            </div>
+        </div>
+        <div class="player-controls">
+            <div class="control-buttons">
+                <button class="shuffle"><i class="fas fa-random"></i></button>
+                <button class="previous"><i class="fas fa-step-backward"></i></button>
+                <button class="play-pause"><i class="fas fa-play"></i></button>
+                <button class="next"><i class="fas fa-step-forward"></i></button>
+                <button class="repeat"><i class="fas fa-redo"></i></button>
+            </div>
+            <div class="progress-container">
+                <span class="current-time">0:00</span>
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+                <span class="total-time">3:45</span>
+            </div>
+        </div>
+        <div class="volume-controls">
+            <button class="volume-button"><i class="fas fa-volume-up"></i></button>
+            <div class="volume-slider">
+                <div class="volume-progress"></div>
+            </div>
+        </div>
+    </div>
+    <script src="js/musicPlayer.js"></script>
+    <script src="js/liked-songs.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

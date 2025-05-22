@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Stream - Spotify Clone</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-peer/9.11.1/simplepeer.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="stream-controls">
+            <h2>Live Streaming</h2>
+            <div id="streamer-controls" class="hidden">
+                <button id="start-stream">Start Streaming</button>
+                <button id="stop-stream" class="hidden">Stop Streaming</button>
+                <p>Stream ID: <span id="stream-id"></span></p>
+            </div>
+            <div id="listener-controls">
+                <input type="text" id="join-stream-id" placeholder="Enter Stream ID">
+                <button id="join-stream">Join Stream</button>
+            </div>
+        </div>
+        <div id="status" class="status"></div>
+    </div>
+
+    <script src="js/streaming.js"></script>
+</body>
+</html> 
